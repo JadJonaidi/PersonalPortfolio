@@ -2059,6 +2059,483 @@
       }
     }
 
+
+
+    /* Premium project command-center section */
+    .project-lab {
+      display: grid;
+      grid-template-columns: 0.42fr 1fr;
+      gap: 22px;
+      min-height: 720px;
+    }
+
+    .project-lab-left {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.13), transparent 34%),
+        rgba(255,255,255,0.045);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      align-self: stretch;
+    }
+
+    .project-lab-label {
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 18px;
+    }
+
+    .project-tab {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: center;
+      text-align: left;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: white;
+      border-radius: 22px;
+      padding: 16px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: 0.28s ease;
+    }
+
+    .project-tab span {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(56,189,248,0.1);
+      color: var(--blue);
+      font-weight: 1000;
+      border: 1px solid rgba(56,189,248,0.25);
+    }
+
+    .project-tab strong {
+      display: block;
+      font-size: 0.98rem;
+      margin-bottom: 5px;
+    }
+
+    .project-tab small {
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.4;
+    }
+
+    .project-tab:hover,
+    .project-tab.active {
+      transform: translateX(8px);
+      border-color: rgba(56,189,248,0.55);
+      background: linear-gradient(135deg, rgba(56,189,248,0.14), rgba(139,92,246,0.10));
+    }
+
+    .project-lab-main {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 82% 14%, rgba(56,189,248,0.16), transparent 32%),
+        radial-gradient(circle at 12% 88%, rgba(139,92,246,0.14), transparent 35%),
+        rgba(255,255,255,0.045);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .project-lab-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 38px 38px;
+      opacity: 0.32;
+      pointer-events: none;
+    }
+
+    .project-lab-top,
+    .project-lab-content,
+    .project-lab-controls {
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-lab-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 30px 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-lab-top span {
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+    }
+
+    .project-lab-top h3 {
+      margin-top: 10px;
+      font-size: clamp(2rem, 4.7vw, 5.2rem);
+      line-height: 0.9;
+      letter-spacing: -4px;
+      text-transform: uppercase;
+    }
+
+    .project-count {
+      text-align: right;
+      font-weight: 1000;
+    }
+
+    .project-count span {
+      display: block;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 0.8;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .project-count small {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .project-lab-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 0.82fr;
+      gap: 30px;
+      padding: 36px;
+      align-items: center;
+    }
+
+    .project-lab-copy {
+      transition: 0.35s ease;
+    }
+
+    .project-lab-copy.is-changing {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+
+    .project-lab-copy > p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+      max-width: 760px;
+    }
+
+    .project-metrics {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .project-metrics div,
+    .project-detail-grid div {
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.24);
+      border-radius: 20px;
+      padding: 16px;
+      backdrop-filter: blur(12px);
+    }
+
+    .project-metrics strong {
+      display: block;
+      font-size: 1.25rem;
+      color: white;
+    }
+
+    .project-metrics span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .project-detail-grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .project-detail-grid strong {
+      display: block;
+      color: white;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 8px;
+    }
+
+    .project-detail-grid p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .project-tags {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-tags span {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--line);
+      color: #dbeafe;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .project-main-link {
+      display: inline-flex;
+      margin-top: 24px;
+      padding: 13px 19px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: white;
+      font-weight: 1000;
+      box-shadow: 0 18px 45px rgba(56,189,248,0.16);
+      transition: 0.25s;
+    }
+
+    .project-main-link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 55px rgba(56,189,248,0.28);
+    }
+
+    .project-lab-visual {
+      position: relative;
+      min-height: 430px;
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      background: rgba(2,6,23,0.72);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.35);
+    }
+
+    .visual-noise {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(56,189,248,0.18), transparent 28%),
+        radial-gradient(circle at 80% 80%, rgba(139,92,246,0.16), transparent 30%),
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: auto, auto, 34px 34px, 34px 34px;
+      opacity: 0.9;
+    }
+
+    .visual-badge {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      z-index: 2;
+      color: var(--blue);
+      border: 1px solid rgba(56,189,248,0.35);
+      background: rgba(56,189,248,0.09);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 1000;
+      letter-spacing: 1.5px;
+    }
+
+    .visual-core {
+      position: relative;
+      z-index: 2;
+      width: 240px;
+      height: 240px;
+      border-radius: 44px;
+      display: grid;
+      place-items: center;
+      transition: 0.35s ease;
+    }
+
+    .visual-core span {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.16);
+      animation: projectOrbit 7s linear infinite;
+    }
+
+    .visual-core span:nth-child(1) {
+      width: 220px;
+      height: 220px;
+    }
+
+    .visual-core span:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      animation-duration: 5s;
+      animation-direction: reverse;
+    }
+
+    .visual-core span:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(56,189,248,0.9), rgba(139,92,246,0.25), transparent 70%);
+      box-shadow: 0 0 90px rgba(56,189,248,0.45);
+    }
+
+    .ai-mode {
+      border-radius: 50%;
+    }
+
+    .phone-mode {
+      border-radius: 42px;
+      width: 180px;
+      height: 320px;
+      border: 8px solid rgba(255,255,255,0.16);
+      background:
+        linear-gradient(135deg, rgba(236,72,153,0.55), rgba(251,146,60,0.32)),
+        rgba(255,255,255,0.06);
+    }
+
+    .web-mode {
+      width: 340px;
+      height: 230px;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.12) 0 18%, transparent 18%),
+        linear-gradient(135deg, rgba(56,189,248,0.28), rgba(139,92,246,0.22)),
+        rgba(255,255,255,0.06);
+    }
+
+    @keyframes projectOrbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .project-lab-controls {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 18px;
+      padding: 0 36px 34px;
+    }
+
+    .project-lab-controls button {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.06);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 1000;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .project-lab-controls button:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56,189,248,0.45);
+    }
+
+    .project-lab-progress {
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .project-lab-progress span {
+      display: block;
+      height: 100%;
+      width: 33.33%;
+      background: linear-gradient(90deg, var(--blue), var(--purple), var(--pink));
+      transition: 0.35s ease;
+    }
+
+    @media (max-width: 1050px) {
+      .project-lab {
+        grid-template-columns: 1fr;
+      }
+
+      .project-lab-left {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .project-lab-label {
+        grid-column: 1 / -1;
+      }
+
+      .project-tab {
+        margin-bottom: 0;
+      }
+
+      .project-tab:hover,
+      .project-tab.active {
+        transform: translateY(-4px);
+      }
+
+      .project-lab-content {
+        grid-template-columns: 1fr;
+      }
+
+      .project-lab-visual {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .project-lab-left {
+        grid-template-columns: 1fr;
+      }
+
+      .project-lab-top {
+        flex-direction: column;
+      }
+
+      .project-count {
+        text-align: left;
+      }
+
+      .project-lab-content {
+        padding: 24px;
+      }
+
+      .project-metrics,
+      .project-detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-lab-controls {
+        grid-template-columns: 1fr;
+      }
+
+      .project-lab-controls button {
+        width: 100%;
+      }
+
+      .project-lab-visual {
+        min-height: 330px;
+      }
+
+      .web-mode {
+        width: 260px;
+        height: 190px;
+      }
+    }
+
   </style>
 </head>
 
@@ -2066,7 +2543,7 @@
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <header class="nav">
-    <a class="brand" href="#home">JAD<span>.DEV</span></a>
+    <a class="brand" href="#home"><span>J</span>.JONAIDI</a>
 
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
@@ -2097,14 +2574,16 @@
         <div class="role">Software Engineer</div>
 
         <p class="hero-copy">
-          I build clean, practical, and visually polished software — from responsive
-          frontend interfaces to backend APIs, databases, debugging, testing, and
-          real-world applications.
+          I build full-stack applications and backend systems with a focus on clean
+          architecture, API design, databases, and real-world functionality. My work
+          spans frontend interfaces, backend logic, data flow, debugging, and scalable
+          application development.
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#projects"><span>View Projects</span></a>
-          <a class="btn" href="#contact"><span>Contact Me</span></a>
+          <a class="btn primary" href="#projects"><span>View Work</span></a>
+          <a class="btn" href="https://github.com/JadJonaidi" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
+          <a class="btn" href="mailto:JadJonaidi@outlook.com"><span>Contact</span></a>
         </div>
 
         <div class="quick-stats">
@@ -2157,9 +2636,9 @@
         <div>
           <h2>Developer with a builder mindset.</h2>
           <p>
-            Before the resume details, this is the simple version: I like building useful,
-            clean, and practical software. My focus is full-stack development, backend APIs,
-            polished interfaces, debugging, testing, and improving user-focused systems.
+            I like building useful, clean, and practical software. My focus is full-stack
+            development, backend APIs, polished interfaces, debugging, testing, and improving
+            systems that support real users and business needs.
           </p>
         </div>
       </div>
@@ -2168,9 +2647,10 @@
         <div class="card reveal">
           <h3>Who I Am</h3>
           <p>
-            I’m a software engineering graduate from the University of Michigan with
-            hands-on experience creating full-stack applications, internal tools,
-            backend logic, and polished user interfaces.
+            I’m a software engineer with hands-on experience building full-stack applications,
+            backend APIs, cloud-integrated systems, and data-driven software solutions.
+            I focus on writing clean, maintainable code and building practical software that
+            solves real-world problems.
           </p>
         </div>
 
@@ -2180,7 +2660,7 @@
           </div>
           <pre><code>const jad = {
   role: "Software Engineer",
-  focus: ["Full-Stack", "Backend APIs", "Clean UI"],
+  focus: ["Full-Stack", "Backend APIs", "Data-Driven Systems"],
   tools: ["React", "Node.js", "Python", "SQL"],
   mindset: "Learn fast. Build better."
 };</code></pre>
@@ -2192,10 +2672,11 @@
       <div class="section-title reveal">
         <div class="kicker">Education</div>
         <div>
-          <h2>Academic foundation with practical engineering focus.</h2>
+          <h2>Strong academic foundation with practical engineering focus.</h2>
           <p>
             My software engineering background gave me a strong base in programming,
-            full-stack development, databases, software design, debugging, and project-based problem solving.
+            full-stack development, databases, software design, debugging, testing, and
+            project-based problem solving.
           </p>
         </div>
       </div>
@@ -2203,25 +2684,25 @@
       <div class="education-showcase">
         <div class="education-main reveal">
           <div class="education-badge">University of Michigan</div>
-          <h3>Software Engineering</h3>
+          <h3>B.S. Software Engineering</h3>
           <p>
-            Built a technical foundation across object-oriented programming, web development,
-            database systems, software testing, debugging, and engineering design. My coursework
-            and projects helped me connect theory with practical software development.
+            Graduated from the University of Michigan with a strong academic record and a
+            practical software engineering foundation across object-oriented programming,
+            web development, database systems, testing, debugging, and full-stack project work.
           </p>
 
           <div class="education-meta">
             <div>
-              <strong>Degree Focus</strong>
-              <span>Software engineering, systems, and application development</span>
+              <strong>GPA</strong>
+              <span>3.9 / 4.0</span>
             </div>
             <div>
-              <strong>Core Skills</strong>
-              <span>Programming, databases, testing, debugging, and APIs</span>
+              <strong>Recognition</strong>
+              <span>Graduated with High Distinction</span>
             </div>
             <div>
-              <strong>Project Work</strong>
-              <span>Full-stack apps, backend logic, and user-focused systems</span>
+              <strong>Graduation</strong>
+              <span>December 2025</span>
             </div>
           </div>
         </div>
@@ -2240,17 +2721,17 @@
             <span>Applied Learning</span>
             <h4>Project-Based Engineering</h4>
             <p>
-              Built and improved applications that involved UI design, data handling,
-              API concepts, debugging, testing, and practical problem solving.
+              Built and improved applications involving UI design, data handling, API concepts,
+              debugging, testing, and practical problem solving.
             </p>
           </div>
 
           <div class="education-focus-card reveal">
             <span>Career Direction</span>
-            <h4>Full-Stack Development</h4>
+            <h4>Full-Stack & Backend Systems</h4>
             <p>
-              Focused on becoming a developer who can understand both the user-facing
-              experience and the backend systems that support it.
+              Focused on becoming a developer who understands both the user-facing experience
+              and the backend systems, APIs, and data flow that support it.
             </p>
           </div>
         </div>
@@ -2273,29 +2754,31 @@
       <div class="experience-timeline">
         <article class="experience-card reveal">
           <div class="experience-date">
-            Business / Software
+            May 2025 — Aug 2025
             <span>Software Engineering Internship</span>
           </div>
 
           <div class="experience-body">
-            <h3>Software & Operations Support</h3>
-            <h4>Fares Corp</h4>
+            <h3>Software Engineering Intern</h3>
+            <h4>Fares Corporation</h4>
 
             <ul class="experience-points">
-              <li>Supported business operations through practical software-related improvements, data organization, and process support.</li>
-              <li>Helped structure information more clearly so operational tasks could be tracked, reviewed, and managed more efficiently.</li>
-              <li>Contributed to user-focused problem solving by identifying workflow gaps and supporting practical improvements.</li>
-              <li>Built experience understanding how software decisions connect directly to business efficiency and day-to-day users.</li>
+              <li>Developed features for a full-stack mobile application enabling tenants to pay rent, submit maintenance requests, receive notifications, and manage shared resources.</li>
+              <li>Integrated third-party APIs to support payment processing, real-time updates, and core application functionality.</li>
+              <li>Designed and implemented backend logic to handle user interactions and data flow across the application.</li>
+              <li>Debugged and resolved complex workflow issues, improving application stability and user experience.</li>
             </ul>
 
             <div class="experience-highlight">
-              <span>Operations</span>
-              <span>Data Organization</span>
-              <span>Process Support</span>
-              <span>Problem Solving</span>
+              <span>React Native</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>REST APIs</span>
+              <span>Debugging</span>
             </div>
           </div>
         </article>
+
         <article class="experience-card reveal">
           <div class="experience-date">
             Jan 2026 — Mar 2026
@@ -2307,10 +2790,10 @@
             <h4>Beach Company for Fish S.A.R.L</h4>
 
             <ul class="experience-points">
-              <li>Developed internal software tools to support inventory tracking, order management, logistics coordination, and day-to-day operational workflows.</li>
-              <li>Improved how operational data was organized, accessed, and updated to make business information easier to manage and more reliable.</li>
-              <li>Worked on backend logic and data flow for internal systems, focusing on functionality, structure, debugging, and practical usability.</li>
-              <li>Helped reduce manual processes by supporting features that made routine business tasks more efficient and easier to track.</li>
+              <li>Developed internal software tools to support business operations, including inventory tracking, order management, and logistics coordination.</li>
+              <li>Improved data organization and system structure to enhance accuracy and accessibility of operational data.</li>
+              <li>Designed and enhanced backend logic to support day-to-day business operations and data flow.</li>
+              <li>Debugged and optimized system functionality to improve performance, reliability, and workflow efficiency.</li>
             </ul>
 
             <div class="experience-highlight">
@@ -2329,276 +2812,133 @@
       <div class="section-title reveal">
         <div class="kicker">Projects</div>
         <div>
-          <h2>Drag through selected builds.</h2>
+          <h2>Selected engineering work.</h2>
           <p>
-            A horizontal project showcase where the titles, visuals, and project details move together.
-            Drag, use the arrows, or swipe on mobile to explore each build.
+            A focused look at projects that show backend APIs, full-stack development,
+            AI integration, mobile workflows, and practical software design.
           </p>
         </div>
       </div>
 
-      <div class="horizontal-projects reveal">
-        <div class="project-title-viewport">
-          <div class="project-title-track" id="projectTitleTrack">
-            <button class="project-title active" data-project="0">
-              <span>01</span>
-              Portfolio Website
-            </button>
-            <button class="project-title" data-project="1">
-              <span>02</span>
-              AI Retinopathy Detector
-            </button>
-            <button class="project-title" data-project="2">
-              <span>03</span>
-              Smart Wardrobe App
-            </button>
-            <button class="project-title" data-project="3">
-              <span>04</span>
-              FPV Drone Build
-            </button>
-          </div>
+      <div class="project-lab reveal">
+        <div class="project-lab-left">
+          <div class="project-lab-label">Project Index</div>
+
+          <button class="project-tab active" data-project="0">
+            <span>01</span>
+            <div>
+              <strong>AI Retinopathy Detector</strong>
+              <small>FastAPI • TensorFlow • Firebase</small>
+            </div>
+          </button>
+
+          <button class="project-tab" data-project="1">
+            <span>02</span>
+            <div>
+              <strong>Virtual Wardrobe App</strong>
+              <small>React Native • Node.js • Firebase</small>
+            </div>
+          </button>
+
+          <button class="project-tab" data-project="2">
+            <span>03</span>
+            <div>
+              <strong>Therapist Booking Website</strong>
+              <small>Express • SQLite • JavaScript</small>
+            </div>
+          </button>
         </div>
 
-        <div class="project-showcase">
-          <div class="project-showcase-top">
+        <div class="project-lab-main">
+          <div class="project-lab-top">
             <div>
-              <span class="project-mini-label">Horizontal Showcase</span>
-              <h3 id="activeProjectName">Portfolio Website</h3>
+              <span id="projectCategory">AI / Backend API</span>
+              <h3 id="projectName">AI Retinopathy Detector</h3>
             </div>
 
-            <div class="project-controls">
-              <button class="project-control" id="prevProject" aria-label="Previous project">←</button>
-              <button class="project-control" id="nextProject" aria-label="Next project">→</button>
-            </div>
-          </div>
-
-          <div class="horizontal-progress">
-            <span id="horizontalProgress"></span>
-          </div>
-
-          <div class="project-slider-window" id="projectSliderWindow">
-            <div class="project-slider-track" id="projectSliderTrack">
-              <article class="project-slide-card" data-name="Portfolio Website">
-                <div class="project-slide-content">
-                  <div class="project-eyebrow">
-                    <span>01 / Frontend / Personal Brand</span>
-                    <span>Featured Build</span>
-                  </div>
-
-                  <h4>Portfolio Website</h4>
-
-                  <p>
-                    A polished personal portfolio built as a recruiter-focused product experience.
-                    The site combines bold typography, animated UI, responsive layout, and a case-study
-                    project system to present my background in a more memorable way.
-                  </p>
-
-                  <div class="project-breakdown">
-                    <div class="break-card">
-                      <strong>Problem</strong>
-                      <span>I needed more than a basic resume page. I needed something intentional, modern, and professional.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Solution</strong>
-                      <span>Built a cinematic one-page portfolio with motion, hierarchy, and project storytelling.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Stack</strong>
-                      <span>HTML, CSS, JavaScript, responsive design, animations, and DOM interaction.</span>
-                    </div>
-                  </div>
-
-                  <div class="project-bottom">
-                    <div class="tags">
-                      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive UI</span>
-                    </div>
-
-                    <div class="project-links">
-                      <a href="https://github.com/JadJonaidi" target="_blank" rel="noopener noreferrer">View GitHub →</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-slide-visual tilt-card">
-                  <div class="visual-orb"></div>
-                  <div class="browser-demo">
-                    <div class="browser-bar"><span></span><span></span><span></span></div>
-                    <div class="browser-hero"></div>
-                    <div class="browser-lines">
-                      <span></span><span></span><span></span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="project-slide-card" data-name="AI Retinopathy Detector">
-                <div class="project-slide-content">
-                  <div class="project-eyebrow">
-                    <span>02 / AI / Machine Learning</span>
-                    <span>Computer Vision</span>
-                  </div>
-
-                  <h4>AI Retinopathy Detector</h4>
-
-                  <p>
-                    A machine-learning project focused on retinal image analysis and early detection
-                    concepts. The project demonstrates image classification workflow, Python model logic,
-                    and backend integration through a clean technical presentation.
-                  </p>
-
-                  <div class="project-breakdown">
-                    <div class="break-card">
-                      <strong>Problem</strong>
-                      <span>Medical image analysis can benefit from faster screening and classification support.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Solution</strong>
-                      <span>Built an AI workflow for processing retinal images and returning prediction-style results.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Stack</strong>
-                      <span>Python, machine learning, Flask, image processing, backend API concepts.</span>
-                    </div>
-                  </div>
-
-                  <div class="project-bottom">
-                    <div class="tags">
-                      <span>Python</span><span>Machine Learning</span><span>Flask</span><span>Image Processing</span>
-                    </div>
-
-                    <div class="project-links">
-                      <a href="https://github.com/AI-Retinopathy-Detector/AI-Retinopathy-Backend" target="_blank" rel="noopener noreferrer">View GitHub →</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-slide-visual tilt-card">
-                  <div class="visual-orb"></div>
-                  <div class="ai-core"></div>
-                </div>
-              </article>
-
-              <article class="project-slide-card" data-name="Smart Wardrobe App">
-                <div class="project-slide-content">
-                  <div class="project-eyebrow">
-                    <span>03 / Mobile / Product Design</span>
-                    <span>App Concept</span>
-                  </div>
-
-                  <h4>Smart Wardrobe App</h4>
-
-                  <p>
-                    A mobile app concept for organizing clothing, planning outfits, managing wardrobe
-                    items, and creating a smoother daily outfit decision workflow through a clean
-                    mobile-first user experience.
-                  </p>
-
-                  <div class="project-breakdown">
-                    <div class="break-card">
-                      <strong>Problem</strong>
-                      <span>People lose track of clothing items and waste time deciding what to wear.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Solution</strong>
-                      <span>Designed a wardrobe system for items, outfit planning, and a cleaner daily workflow.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Stack</strong>
-                      <span>React Native, Firebase, mobile UI, product thinking, and data organization.</span>
-                    </div>
-                  </div>
-
-                  <div class="project-bottom">
-                    <div class="tags">
-                      <span>React Native</span><span>Firebase</span><span>Mobile UI</span><span>UX</span>
-                    </div>
-
-                    <div class="project-links">
-                      <a href="https://github.com/JadJonaidi/Virtual-Wardrobe-App" target="_blank" rel="noopener noreferrer">View GitHub →</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-slide-visual tilt-card">
-                  <div class="visual-orb"></div>
-                  <div class="phone-demo">
-                    <div class="phone-notch"></div>
-                    <div class="phone-block hero-block"></div>
-                    <div class="phone-block blue-block"></div>
-                    <div class="phone-grid">
-                      <span></span><span></span><span></span><span></span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="project-slide-card" data-name="FPV Drone Build">
-                <div class="project-slide-content">
-                  <div class="project-eyebrow">
-                    <span>04 / Hardware / Engineering</span>
-                    <span>In Progress</span>
-                  </div>
-
-                  <h4>FPV Drone Build</h4>
-
-                  <p>
-                    A personal engineering build documenting drone parts, configuration,
-                    setup progress, troubleshooting, and future flight testing. This project
-                    adds a hands-on engineering side to my portfolio beyond normal web apps.
-                  </p>
-
-                  <div class="project-breakdown">
-                    <div class="break-card">
-                      <strong>Problem</strong>
-                      <span>FPV drone builds require careful parts selection, setup, testing, and troubleshooting.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Solution</strong>
-                      <span>Created a build log to document components, configuration, testing, and progress.</span>
-                    </div>
-                    <div class="break-card">
-                      <strong>Stack</strong>
-                      <span>Hardware, documentation, testing, troubleshooting, and systems thinking.</span>
-                    </div>
-                  </div>
-
-                  <div class="project-bottom">
-                    <div class="tags">
-                      <span>Hardware</span><span>Build Log</span><span>Testing</span><span>Documentation</span>
-                    </div>
-
-                    <div class="project-links">
-                      <a href="https://github.com/JadJonaidi" target="_blank" rel="noopener noreferrer">View GitHub →</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-slide-visual tilt-card">
-                  <div class="visual-orb"></div>
-                  <div class="drone-demo">
-                    <div class="drone-arm a1"></div>
-                    <div class="drone-arm a2"></div>
-                    <div class="drone-arm a3"></div>
-                    <div class="drone-arm a4"></div>
-                    <div class="drone-center"></div>
-                    <div class="drone-prop p1"></div>
-                    <div class="drone-prop p2"></div>
-                    <div class="drone-prop p3"></div>
-                    <div class="drone-prop p4"></div>
-                  </div>
-                </div>
-              </article>
+            <div class="project-count">
+              <span id="projectNumber">01</span>
+              <small>/ 03</small>
             </div>
           </div>
 
-          <div class="swipe-hint">Drag / swipe horizontally to explore projects →</div>
+          <div class="project-lab-content">
+            <div class="project-lab-copy">
+              <p id="projectDescription">
+                AI-based system for detecting diabetic retinopathy from retinal images and providing
+                real-time diagnostic predictions through a backend API connected to model inference,
+                authenticated requests, and prediction history.
+              </p>
+
+              <div class="project-metrics">
+                <div>
+                  <strong id="metricOne">120K+</strong>
+                  <span>Training Images</span>
+                </div>
+                <div>
+                  <strong id="metricTwo">FastAPI</strong>
+                  <span>Backend Layer</span>
+                </div>
+                <div>
+                  <strong id="metricThree">Firebase</strong>
+                  <span>Data Storage</span>
+                </div>
+              </div>
+
+              <div class="project-detail-grid">
+                <div>
+                  <strong>Problem</strong>
+                  <p id="projectProblem">
+                    Retinal image screening can benefit from faster prediction support and organized diagnostic workflows.
+                  </p>
+                </div>
+
+                <div>
+                  <strong>Solution</strong>
+                  <p id="projectSolution">
+                    Built a backend that processes image data, serves model predictions, and stores results through Firebase.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-tags" id="projectTags">
+                <span>FastAPI</span>
+                <span>TensorFlow</span>
+                <span>Firebase</span>
+                <span>OpenCV</span>
+                <span>Python</span>
+              </div>
+
+              <a class="project-main-link" id="projectLink" href="https://github.com/AI-Retinopathy-Detector/AI-Retinopathy-Backend" target="_blank" rel="noopener noreferrer">
+                View Project →
+              </a>
+            </div>
+
+            <div class="project-lab-visual" id="projectVisual">
+              <div class="visual-noise"></div>
+              <div class="visual-badge" id="visualBadge">AI</div>
+              <div class="visual-core ai-mode">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-lab-controls">
+            <button id="prevLabProject">← Previous</button>
+            <div class="project-lab-progress">
+              <span id="projectLabProgress"></span>
+            </div>
+            <button id="nextLabProject">Next →</button>
+          </div>
         </div>
       </div>
 
       <div class="skills-marquee reveal">
         <div class="marquee-track">
-          <div>JavaScript <span>/</span> TypeScript <span>/</span> React <span>/</span> Node.js <span>/</span> Python <span>/</span> SQL <span>/</span> Git <span>/</span> Docker <span>/</span> AWS Basics <span>/</span></div>
-          <div>JavaScript <span>/</span> TypeScript <span>/</span> React <span>/</span> Node.js <span>/</span> Python <span>/</span> SQL <span>/</span> Git <span>/</span> Docker <span>/</span> AWS Basics <span>/</span></div>
+          <div>JavaScript <span>/</span> TypeScript <span>/</span> React <span>/</span> Node.js <span>/</span> Python <span>/</span> SQL <span>/</span> FastAPI <span>/</span> Firebase <span>/</span> AWS Basics <span>/</span></div>
+          <div>JavaScript <span>/</span> TypeScript <span>/</span> React <span>/</span> Node.js <span>/</span> Python <span>/</span> SQL <span>/</span> FastAPI <span>/</span> Firebase <span>/</span> AWS Basics <span>/</span></div>
         </div>
       </div>
     </section>
@@ -2612,10 +2952,9 @@
         </p>
 
         <div class="contact-links">
-          <a href="mailto:jadjonaidi@outlook.com">Email</a>
-          <a href="https://github.com/JadJonaidi" target="_blank">GitHub</a>
-          <a href="#" target="_blank">LinkedIn</a>
-          <a href="#" target="_blank">Resume</a>
+          <a href="mailto:JadJonaidi@outlook.com?subject=Opportunity%20Inquiry">Email</a>
+          <a href="https://github.com/JadJonaidi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://jadjonaidi.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
         </div>
       </div>
     </section>
@@ -2632,22 +2971,6 @@
     const cursorGlow = document.getElementById("cursorGlow");
     const navAnchors = document.querySelectorAll(".nav-links a");
 
-    const titleTrack = document.getElementById("projectTitleTrack");
-    const titleButtons = document.querySelectorAll(".project-title");
-    const sliderWindow = document.getElementById("projectSliderWindow");
-    const sliderTrack = document.getElementById("projectSliderTrack");
-    const projectCards = document.querySelectorAll(".project-slide-card");
-    const activeProjectName = document.getElementById("activeProjectName");
-    const horizontalProgress = document.getElementById("horizontalProgress");
-    const prevProject = document.getElementById("prevProject");
-    const nextProject = document.getElementById("nextProject");
-    const tiltCards = document.querySelectorAll(".tilt-card");
-
-    let activeProject = 0;
-    let isDragging = false;
-    let dragStartX = 0;
-    let dragDeltaX = 0;
-
     menuBtn.addEventListener("click", () => {
       navLinks.classList.toggle("active");
     });
@@ -2661,7 +2984,6 @@
     function revealOnScroll() {
       revealItems.forEach(item => {
         const top = item.getBoundingClientRect().top;
-
         if (top < window.innerHeight - 90) {
           item.classList.add("active");
         }
@@ -2674,7 +2996,6 @@
 
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 140;
-
         if (window.scrollY >= sectionTop) {
           current = section.getAttribute("id");
         }
@@ -2685,144 +3006,148 @@
       });
     }
 
-    function clampProject(index) {
-      if (index < 0) return projectCards.length - 1;
-      if (index >= projectCards.length) return 0;
-      return index;
+    const projectData = [
+      {
+        number: "01",
+        category: "AI / Backend API",
+        name: "AI Retinopathy Detector",
+        description:
+          "AI-based system for detecting diabetic retinopathy from retinal images and providing real-time diagnostic predictions through a backend API connected to model inference, authenticated requests, and prediction history.",
+        metricOne: "120K+",
+        metricOneLabel: "Training Images",
+        metricTwo: "FastAPI",
+        metricTwoLabel: "Backend Layer",
+        metricThree: "Firebase",
+        metricThreeLabel: "Data Storage",
+        problem:
+          "Retinal image screening can benefit from faster prediction support and organized diagnostic workflows.",
+        solution:
+          "Built a backend that processes image data, serves model predictions, and stores results through Firebase.",
+        tags: ["FastAPI", "TensorFlow", "Firebase", "OpenCV", "Python"],
+        link: "https://github.com/AI-Retinopathy-Detector/AI-Retinopathy-Backend",
+        visual: "ai-mode",
+        badge: "AI"
+      },
+      {
+        number: "02",
+        category: "Mobile / Full-Stack",
+        name: "Virtual Wardrobe App",
+        description:
+          "Full-stack mobile application that allows users to manage clothing items, visualize outfits digitally, and organize wardrobe data through a mobile-style user experience.",
+        metricOne: "Mobile",
+        metricOneLabel: "App Experience",
+        metricTwo: "Node.js",
+        metricTwoLabel: "Backend APIs",
+        metricThree: "Firebase",
+        metricThreeLabel: "Cloud Storage",
+        problem:
+          "Users need a cleaner way to organize clothing, track wardrobe items, and plan outfits digitally.",
+        solution:
+          "Developed a wardrobe management flow with upload functionality, outfit visualization, backend persistence, and user-specific data.",
+        tags: ["React Native", "Node.js", "Firebase", "Expo Go", "Mobile UI"],
+        link: "https://github.com/JadJonaidi/Virtual-Wardrobe-App",
+        visual: "phone-mode",
+        badge: "APP"
+      },
+      {
+        number: "03",
+        category: "Web App / Full-Stack",
+        name: "Therapist Booking Website",
+        description:
+          "Responsive therapy practice website with a prototype consultation booking system, admin-managed availability, Express API routes, and SQLite data persistence.",
+        metricOne: "Express",
+        metricOneLabel: "Backend Routes",
+        metricTwo: "SQLite",
+        metricTwoLabel: "Data Layer",
+        metricThree: "Booking",
+        metricThreeLabel: "User Flow",
+        problem:
+          "Service-based websites need clear information, accessible booking flow, and reliable availability management.",
+        solution:
+          "Built a full-stack website with service sections, booking flow, admin slot management, backend APIs, and database storage.",
+        tags: ["HTML", "CSS", "JavaScript", "Express", "SQLite"],
+        link: "https://github.com/JadJonaidi/Therapist-Booking-Website",
+        visual: "web-mode",
+        badge: "WEB"
+      }
+    ];
+
+    const projectTabs = document.querySelectorAll(".project-tab");
+    const projectName = document.getElementById("projectName");
+    const projectCategory = document.getElementById("projectCategory");
+    const projectNumber = document.getElementById("projectNumber");
+    const projectDescription = document.getElementById("projectDescription");
+    const metricOne = document.getElementById("metricOne");
+    const metricTwo = document.getElementById("metricTwo");
+    const metricThree = document.getElementById("metricThree");
+    const projectProblem = document.getElementById("projectProblem");
+    const projectSolution = document.getElementById("projectSolution");
+    const projectTags = document.getElementById("projectTags");
+    const projectLink = document.getElementById("projectLink");
+    const projectVisual = document.getElementById("projectVisual");
+    const visualBadge = document.getElementById("visualBadge");
+    const projectLabProgress = document.getElementById("projectLabProgress");
+    const projectCopy = document.querySelector(".project-lab-copy");
+    const prevLabProject = document.getElementById("prevLabProject");
+    const nextLabProject = document.getElementById("nextLabProject");
+
+    let currentLabProject = 0;
+
+    function renderLabProject(index) {
+      currentLabProject = (index + projectData.length) % projectData.length;
+      const item = projectData[currentLabProject];
+
+      projectCopy.classList.add("is-changing");
+
+      setTimeout(() => {
+        projectName.textContent = item.name;
+        projectCategory.textContent = item.category;
+        projectNumber.textContent = item.number;
+        projectDescription.textContent = item.description;
+
+        metricOne.textContent = item.metricOne;
+        metricOne.nextElementSibling.textContent = item.metricOneLabel;
+
+        metricTwo.textContent = item.metricTwo;
+        metricTwo.nextElementSibling.textContent = item.metricTwoLabel;
+
+        metricThree.textContent = item.metricThree;
+        metricThree.nextElementSibling.textContent = item.metricThreeLabel;
+
+        projectProblem.textContent = item.problem;
+        projectSolution.textContent = item.solution;
+        projectTags.innerHTML = item.tags.map(tag => `<span>${tag}</span>`).join("");
+        projectLink.href = item.link;
+        visualBadge.textContent = item.badge;
+
+        const core = projectVisual.querySelector(".visual-core");
+        core.className = `visual-core ${item.visual}`;
+        core.innerHTML = "<span></span><span></span><span></span>";
+
+        projectTabs.forEach((tab, tabIndex) => {
+          tab.classList.toggle("active", tabIndex === currentLabProject);
+        });
+
+        projectLabProgress.style.width = `${((currentLabProject + 1) / projectData.length) * 100}%`;
+        projectCopy.classList.remove("is-changing");
+      }, 180);
     }
 
-    function centerActiveTitle() {
-  if (!titleTrack || !titleButtons.length) return;
-
-  const activeTitle = titleButtons[activeProject];
-  const viewport = titleTrack.parentElement;
-
-  viewport.scrollTo({
-    left: activeTitle.offsetLeft - viewport.offsetWidth / 2 + activeTitle.offsetWidth / 2,
-    behavior: "smooth"
-  });
-}
-
-    function setProject(index) {
-      activeProject = clampProject(index);
-
-      const offset = activeProject * -100;
-      sliderTrack.style.transform = `translateX(${offset}%)`;
-
-      titleButtons.forEach((button, buttonIndex) => {
-        button.classList.toggle("active", buttonIndex === activeProject);
+    projectTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        renderLabProject(Number(tab.dataset.project));
       });
-
-      if (activeProjectName && projectCards[activeProject]) {
-        activeProjectName.textContent = projectCards[activeProject].dataset.name;
-      }
-
-      if (horizontalProgress) {
-        horizontalProgress.style.width = `${((activeProject + 1) / projectCards.length) * 100}%`;
-      }
-
-      centerActiveTitle();
-    }
-
-    function goProject(direction) {
-      setProject(activeProject + direction);
-    }
-
-    titleButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        setProject(Number(button.dataset.project));
-      });
     });
 
-    prevProject.addEventListener("click", () => goProject(-1));
-    nextProject.addEventListener("click", () => goProject(1));
-
-    function startDrag(clientX) {
-      isDragging = true;
-      dragStartX = clientX;
-      dragDeltaX = 0;
-      sliderTrack.style.transition = "none";
-
-    }
-
-    function moveDrag(clientX) {
-      if (!isDragging) return;
-
-      dragDeltaX = clientX - dragStartX;
-      const windowWidth = sliderWindow.offsetWidth;
-      const percentMove = (dragDeltaX / windowWidth) * 100;
-
-      sliderTrack.style.transform = `translateX(${activeProject * -100 + percentMove}%)`;
-    }
-
-    function endDrag() {
-      if (!isDragging) return;
-
-      sliderTrack.style.transition = "transform 0.58s cubic-bezier(.22, 1, .36, 1)";
-
-
-      if (Math.abs(dragDeltaX) > 70) {
-        if (dragDeltaX < 0) {
-          goProject(1);
-        } else {
-          goProject(-1);
-        }
-      } else {
-        setProject(activeProject);
-      }
-
-      isDragging = false;
-      dragDeltaX = 0;
-    }
-
-    sliderWindow.addEventListener("mousedown", event => {
-      startDrag(event.clientX);
+    prevLabProject.addEventListener("click", () => {
+      renderLabProject(currentLabProject - 1);
     });
 
-    window.addEventListener("mousemove", event => {
-      moveDrag(event.clientX);
-
-      if (!cursorGlow) return;
-      cursorGlow.style.left = `${event.clientX}px`;
-      cursorGlow.style.top = `${event.clientY}px`;
+    nextLabProject.addEventListener("click", () => {
+      renderLabProject(currentLabProject + 1);
     });
 
-    window.addEventListener("mouseup", endDrag);
-
-    sliderWindow.addEventListener("touchstart", event => {
-      startDrag(event.touches[0].clientX);
-    }, { passive: true });
-
-    sliderWindow.addEventListener("touchmove", event => {
-      moveDrag(event.touches[0].clientX);
-    }, { passive: true });
-
-    sliderWindow.addEventListener("touchend", endDrag);
-
-    window.addEventListener("load", () => {
-  revealOnScroll();
-  setActiveNav();
-
-  // Initialize project without scrolling the page
-  activeProject = 0;
-  sliderTrack.style.transform = "translateX(0%)";
-
-  titleButtons.forEach((button, buttonIndex) => {
-    button.classList.toggle("active", buttonIndex === 0);
-  });
-
-  if (activeProjectName && projectCards[0]) {
-    activeProjectName.textContent = projectCards[0].dataset.name;
-  }
-
-  if (horizontalProgress) {
-    horizontalProgress.style.width = `${(1 / projectCards.length) * 100}%`;
-  }
-
-  window.scrollTo(0, 0);
-});
-
-    tiltCards.forEach(card => {
+    document.querySelectorAll(".project-lab-visual").forEach(card => {
       card.addEventListener("mousemove", event => {
         if (window.innerWidth < 900) return;
 
@@ -2830,8 +3155,8 @@
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
 
-        const rotateX = ((y / rect.height) - 0.5) * -7;
-        const rotateY = ((x / rect.width) - 0.5) * 7;
+        const rotateX = ((y / rect.height) - 0.5) * -5;
+        const rotateY = ((x / rect.width) - 0.5) * 5;
 
         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       });
@@ -2841,8 +3166,10 @@
       });
     });
 
-    window.addEventListener("resize", () => {
-      setProject(activeProject);
+    window.addEventListener("mousemove", event => {
+      if (!cursorGlow) return;
+      cursorGlow.style.left = `${event.clientX}px`;
+      cursorGlow.style.top = `${event.clientY}px`;
     });
 
     window.addEventListener("scroll", () => {
@@ -2853,7 +3180,8 @@
     window.addEventListener("load", () => {
       revealOnScroll();
       setActiveNav();
-      setProject(0);
+      renderLabProject(0);
+      window.scrollTo(0, 0);
     });
   </script>
 </body>
